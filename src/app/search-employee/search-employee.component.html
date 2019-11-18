@@ -1,0 +1,27 @@
+<h3>Find By employee id</h3>
+<div style="width: 300px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="empId">Employee Id</label>
+      <input type="text" class="form-control" id="empId" required [(ngModel)]="empId" name="empId">
+    </div>
+ 
+    <div class="btn-group">
+      <button type="submit" class="btn btn-success">Submit</button>
+    </div>
+  </form>
+</div>
+<div *ngIf="employee">
+      <div>
+          <label>ID: </label> {{employee.empId}}
+      </div>
+      <div>
+          <label>Name: </label> {{employee.name}}
+      </div>
+      <div>
+          <label>Salary: </label> {{employee.salary}}
+      </div>
+      <div>
+        <label>Designation: </label> {{employee.designation}}
+      </div>   
+</div>
