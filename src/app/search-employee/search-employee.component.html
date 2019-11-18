@@ -11,17 +11,27 @@
     </div>
   </form>
 </div>
+<hr/>
 <div *ngIf="employee">
-      <div>
-          <label>ID: </label> {{employee.empId}}
-      </div>
-      <div>
-          <label>Name: </label> {{employee.name}}
-      </div>
-      <div>
-          <label>Salary: </label> {{employee.salary}}
-      </div>
-      <div>
-        <label>Designation: </label> {{employee.designation}}
-      </div>   
+
+    <div class="col-md-6">
+        <table class="table table-striped">
+        <thead>
+        <tr>
+          <th>Emp ID</th>
+          <th>name</th>
+          <th>designation</th>
+          <th>Salary</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr>
+               <td>{{employee.empId}}</td>
+                <td>{{employee.name}}</td>
+                <td>{{employee.designation}}</td>
+                <td>{{employee.salary}}</td>            
+            </tr>
+        </tbody>
+          </table>
+    </div>
 </div>
